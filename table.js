@@ -8,7 +8,24 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
-   
+    const addBtn = document.getElementById('add-btn');
+    const addForm = document.getElementById('add-form');
+    const closeForm = document.getElementById('close-form');
+    
+
+
+
+  
+    addBtn.addEventListener('click', () => {
+        addForm.classList.remove('hidden');
+    });
+
+
+    closeForm.addEventListener('click', () => {
+        addForm.classList.add('hidden');
+    });
+      
+      
     
     prescriptionData.forEach(item => {
       const row = `

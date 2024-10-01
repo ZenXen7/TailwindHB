@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prescriptionTableBody = document.getElementById('prescription-body');
     const vaccinationTable = document.getElementById('vacc-body');
     const famTable = document.getElementById('fam-body');
+    const socialTable = document.getElementById('social-body');
     
     prescriptionData.forEach(item => {
       const row = `
@@ -58,5 +59,23 @@ document.addEventListener('DOMContentLoaded', function () {
       famTable.insertAdjacentHTML('beforeend', row);
     })
 
+    socialData.forEach(item => {
+      const row = `
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            ${item.dateAdded}
+          </th>
+          <td class="px-6 py-4">${item.nicConsumption}</td>
+          <td class="px-6 py-4">${item.alcConsumption}</td>
+          <td class="px-6 py-4">${item.drug}</td>
+          <td class="px-6 py-4">${item.diet}</td>
+          <td class="px-6 py-4">${item.physAct}</td>
+          <td class="px-6 py-4 text-right">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+          </td>
+        </tr>
+      `;
+      socialTable.insertAdjacentHTML('beforeend', row);
+    })
   });
   

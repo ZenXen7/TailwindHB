@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const vaccinationTable = document.getElementById('vacc-body');
     const famTable = document.getElementById('fam-body');
     const socialTable = document.getElementById('social-body');
+    const digIdTable = document.getElementById('digId-body');
+    
+
+
+   
     
     prescriptionData.forEach(item => {
       const row = `
@@ -23,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
       prescriptionTableBody.insertAdjacentHTML('beforeend', row);
     });
     
-
+  
+    
     vaccData.forEach(item => {
       const row = `
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -77,5 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
       socialTable.insertAdjacentHTML('beforeend', row);
     })
+
+   
+
   });
   
